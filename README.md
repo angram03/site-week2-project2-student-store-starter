@@ -22,8 +22,8 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 
 I am going to resubmit this. I understand there are a lot of core features missing. I am also planning to add stretch features. I was having a rough time understanding this project and the things I learned, so I didn't want to rush myself just to submit it. I want to grasp the material.  I did however push myself a lot and I progressed. So like i mentioned, a resubmission is coming ASAP.
 
+### Walkthrough
 <a href="https://www.loom.com/share/b9fc141f6f704b2cbfe2011e4bcca998">
-    <p>Student Store - 16 June 2023 - Watch Video</p>
     <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/b9fc141f6f704b2cbfe2011e4bcca998-with-play.gif">
   </a>
 
