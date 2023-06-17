@@ -14,11 +14,20 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 
 ### Core Features
 
-- [ ] The website displays header, banner, search, product grid, about, contact, and footer section.
-- [ ] The website displays the products at the [GET /store endpoint](https://codepath-store-api.herokuapp.com/store) on initial page load.
+- [x] The website displays header, banner, search, product grid, about, contact, and footer section.
+- [x] The website displays the products at the [GET /store endpoint](https://codepath-store-api.herokuapp.com/store) on initial page load.
 - [ ] Users can click on a category (clothing, food, etc.) to filter the product grid by type.
 - [ ] Users can search for products.
 - [ ] User can click on a product in the grid to navigate to a new page containing additional product details.
+
+I am going to resubmit this. I understand there are a lot of core features missing. I am also planning to add stretch features. I was having a rough time understanding this project and the things I learned, so I didn't want to rush myself just to submit it. I want to grasp the material.  I did however push myself a lot and I progressed. So like i mentioned, a resubmission is coming ASAP.
+
+<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/b9fc141f6f704b2cbfe2011e4bcca998?sid=e4814987-9032-487c-9ae9-c70b36c4162c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+
+
+
+
 
 ### Stretch Features
 
