@@ -24,10 +24,8 @@ I am going to resubmit this. I understand there are a lot of core features missi
 
 <a href="https://www.loom.com/share/b9fc141f6f704b2cbfe2011e4bcca998">
     <p>Student Store - 16 June 2023 - Watch Video</p>
-    <img style="max-width:300px;" src="https://www.loom.com/share/b9fc141f6f704b2cbfe2011e4bcca998?sid=ae4516b0-a450-4007-9a82-6193590f12c5">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/b9fc141f6f704b2cbfe2011e4bcca998-with-play.gif">
   </a>
-
-
 
 
 
