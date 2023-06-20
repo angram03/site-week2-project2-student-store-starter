@@ -3,10 +3,10 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Navbar from "../Navbar/Navbar"
 import Home from "../Home/Home"
 import Hero from "../Hero/Hero"
-import SearchBar from "../searchBar/searchBar"
+import SearchBar from "../SearchBar/SearchBar"
 import axios from "axios";
 import "./App.css"
-
+import ProductDetail from "../ProductDetail/ProductDetail"
 export default function App() {
 
   const [allProducts, setAllProducts] = useState([]);
@@ -26,20 +26,16 @@ export default function App() {
   console.log("All products", allProducts)
 
   return (
-    <div className="app">
-      <BrowserRouter>
-        <main>
-          <Navbar />
-          <Hero />
-          <SearchBar products={allProducts}/>
-          
-          
-          
-          
-        </main>
 
+      <BrowserRouter>
+        <Navbar />
         <Routes>
-           <Route path="/" element={<Home allProducts={allProducts}/>} />
+
+           <Route path="/" element={<Home 
+                                    allProducts={allProducts}/>} />
+           <Route path="/products/:id" element={<ProductDetail />} />
+           
+           
           
         </Routes>
 
@@ -47,6 +43,6 @@ export default function App() {
       </BrowserRouter>
 
 
-    </div>
+   
   )
 }

@@ -7,7 +7,10 @@ export default function SearchBar({products}) {
  
    
          const [searchTerm, setSearchTerm] = useState("");
-         const [filteredData, setFilteredData] = useState(products);
+         const [filteredData, setFilteredData] = useState(null);
+
+         console.log(`filteredData is ${filteredData}`)
+         console.log(`products is ${products}`)
          
          const handleSearch = (event) => {
             
@@ -25,7 +28,7 @@ export default function SearchBar({products}) {
          const handleClick = (event) => {
             
             
-            setSearchTerm(event.target.value)
+            
             setFilteredData(
                 products.filter((product) => 
                 product.category.toLowerCase().includes(event.target.value.toLowerCase())
@@ -36,47 +39,44 @@ export default function SearchBar({products}) {
          }
 
 
-
-
-
-
-
-
-      
         return (
           <div>
             <h1>Search</h1>
             <div>
-
-                <input
-                id="searchTerm"
-                type="text"
-                value={searchTerm}
-                onChange={handleSearch}
-                placeholder="Search Item"
-                />
+                <form>
+                    <input
+                    id="searchTerm"
+                    type="text"
+                    value={searchTerm}
+                    onChange={handleSearch}
+                    placeholder="Search Item"
+                    />
+                    
+                </form>
+                
 
             </div>
 
             <div>
-            <ul>
-                <li>
-                    <button value="clothing" onClick={handleClick}>Clothing</button>
-                </li>
-                <li>
-                    <button value="foods" onClick={handleClick}>Food</button>
-                </li>
+            <ul className="theList">
+                {/* <li> */}
+                    
+                    <button value="" onClick={handleClick}>All Categories</button>
+                {/* //</li> */}
+                {/* <li> */}
+                    <button value="food" onClick={handleClick}>Food</button>
+                {/* </li> */}
 
-                <li>
+                {/* <li> */}
                     <button value="accessories" onClick={handleClick}>Accessories</button>
-                </li>
-                <li>
+                {/* </li> */}
+                {/* <li> */}
                     <button value="tech" onClick={handleClick}>Tech</button>
-                </li>
+                {/* </li> */}
 
-                <li>
-                    <button value="all" onClick={handleClick}>All Categories</button>
-                </li>
+                {/* <li> */}
+                <button value="clothing" onClick={handleClick}>Clothing</button>
+                {/* </li> */}
 
 
 
@@ -84,18 +84,11 @@ export default function SearchBar({products}) {
 
             </div>
             
-            <ProductGrid allProducts={products} />
-            <ProductGrid allProducts={filteredData}/> 
             {filteredData ? (
-            <ProductGrid products={filteredData} />
+            <ProductGrid allProducts={filteredData} />
             ) : (
-            <ProductGrid products={products} />
+            <ProductGrid allProducts={products} />
             )}
-
-            
-
-
-
 
           </div>
         )

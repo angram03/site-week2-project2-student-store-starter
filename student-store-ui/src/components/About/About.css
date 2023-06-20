@@ -1,7 +1,19 @@
+
 .About{
    
     background: rgb(243, 163, 163);
-    height: 330px;
+    height: auto;
     border: solid 1px #e0e0e0;
     text-align: center;
+    
+}
+.About img{
+    width: 244px;
+    height: 244px;
+}
+
+
+
+.grupo{
+    display: flex;
 }

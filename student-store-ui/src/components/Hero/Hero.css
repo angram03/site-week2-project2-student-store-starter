@@ -41,18 +41,18 @@
     font-weight: 400
 }
 
-.hero .content .media {
+.hero .content .Media {
     display: flex;
     flex-direction: column;
     align-items: center
 }
 
-.Hero .content .media .hero-img {
+.Hero .content .Media .hero-img {
     width: 120px;
     height: 120px;
     margin: 0 105px 0 50px
 }
-.Hero .content .media .img{
+.Hero .content .Media{
     width: 300px;
     height: 300px;
 }

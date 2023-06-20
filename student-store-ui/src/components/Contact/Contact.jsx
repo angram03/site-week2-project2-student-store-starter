@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 export default function Contact() {
   return (
 
-    <div className="contact">
+    <div className="contact" id="contact">
         <h1>Contact Us</h1>
         <div className="info">
             <p>Email: code@path.org</p>
