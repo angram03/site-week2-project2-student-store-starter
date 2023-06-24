@@ -32,7 +32,8 @@ export default function ProductDetail() {
       <div className="product-detail">
         <ProductView 
             product={product} 
-            productid={product.id}/>
+            productid={product.id}
+        />
       </div>
     )
 }

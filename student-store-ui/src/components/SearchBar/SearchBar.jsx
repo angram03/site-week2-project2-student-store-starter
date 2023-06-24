@@ -3,7 +3,7 @@ import "./SearchBar.css"
 import  { useState } from "react";
 import ProductGrid from "../ProductGrid/ProductGrid";
 
-export default function SearchBar({products}) {
+export default function SearchBar({products, handleClick2}) {
  
    
          const [searchTerm, setSearchTerm] = useState("");
@@ -85,9 +85,9 @@ export default function SearchBar({products}) {
             </div>
             
             {filteredData ? (
-            <ProductGrid allProducts={filteredData} />
+            <ProductGrid allProducts={filteredData} handleClick2={handleClick2}/>
             ) : (
-            <ProductGrid allProducts={products} />
+            <ProductGrid allProducts={products} handleClick2={handleClick2}/>
             )}
 
           </div>

@@ -46,9 +46,13 @@ Student Store - 20 June 2023 - Watch Video
     <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/672a0c0f71f74d9ea5e1a11f7fe73aea-with-play.gif">
   </a>
 
+### Week 3 Walkthrough
+<a href="https://www.loom.com/share/0ee43dc0a7a448858127d510f06c1ed2">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/0ee43dc0a7a448858127d510f06c1ed2-with-play.gif">
+</a>
 
-
-
+### Week 3 Updates
+I am planning to resubmit! I still have to implement the rest of the core features, but they rely on the shopping cart which is still something I am trying to understand.
 
 
 ### Stretch Features
@@ -63,8 +67,8 @@ Student Store - 20 June 2023 - Watch Video
 
 ### Core Features
 
-- [ ] User can click to expand the shopping cart in the left navigation.
-- [ ] Users can click the '+' button on a product cart to increment that product in the shopping cart.
+- [x] User can click to expand the shopping cart in the left navigation.
+- [x] Users can click the '+' button on a product cart to increment that product in the shopping cart.
 - [ ] Users can click the '-' button on a product cart to decrement that product in the shopping cart. If the count is zero, the product should be removed from the cart.
 - [ ] The shopping cart displays a table of products, quantities, subtotal, tax, and total.
 - [ ] Users can checkout, and receive a receipt confirming their purchase.

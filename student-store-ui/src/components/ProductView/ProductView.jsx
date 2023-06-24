@@ -4,7 +4,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 
-export default function ProductView({ product, productid }) {
+export default function ProductView({ product, productid}) {
   const { name, image, price, description } = product;
 
   return (

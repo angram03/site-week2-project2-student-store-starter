@@ -1,11 +1,39 @@
 import * as React from "react"
 import "./ShoppingCart.css"
+import { useState, useEffect } from "react"
 
-export default function ShoppingCart() {
+
+
+export default function ShoppingCart({cart}) {
+ 
+  
+
+   
   return (
-    
-    <h1>this is where the Shopping Cart is supposed to be</h1>
-    
+    <div className="CART">
+    <table>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</div>
  
   )
 }

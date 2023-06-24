@@ -6,13 +6,13 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
   crossorigin="anonymous"
 ></script>;
 
-export default function Navbar() {
+export default function Navbar({size}) {
   return (
     <div className="navbar">
       <div className="content">
         <Link to="/">
         <div className="logo">
-         <a href="#home"><img src="https://codepath-student-store-demo.surge.sh/assets/codepath.f1b3e41a.svg" /> </a>
+         <p href="#home"><img src="https://codepath-student-store-demo.surge.sh/assets/codepath.f1b3e41a.svg" /> </p>
         </div>
         </Link>
         
@@ -22,7 +22,7 @@ export default function Navbar() {
         <ul className="links">
           <Link to="/" >
           <li>
-            <a href="#home">Home</a>
+            <p href="#home">Home</p>
           </li>
           </Link>
           
@@ -38,7 +38,18 @@ export default function Navbar() {
           <li>
             <a href="#product-grid">Buy</a>
           </li>
+         
+        
         </ul>
+
+        {/* <div className="cart">
+          <span>
+              <i className="fas fa-cart-plus"></i> 
+          </span>
+          <span>
+            {size}
+          </span>
+        </div> */}
       </div>
     </div>
   );
