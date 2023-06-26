@@ -3,14 +3,15 @@ import "./SearchBar.css"
 import  { useState } from "react";
 import ProductGrid from "../ProductGrid/ProductGrid";
 
-export default function SearchBar({products, handleClick2}) {
+export default function SearchBar({products, handleClick2, onAdd, onRemove}) {
  
    
          const [searchTerm, setSearchTerm] = useState("");
          const [filteredData, setFilteredData] = useState(null);
 
          console.log(`filteredData is ${filteredData}`)
-         console.log(`products is ${products}`)
+         console.log(products)
+
          
          const handleSearch = (event) => {
             
@@ -26,6 +27,7 @@ export default function SearchBar({products, handleClick2}) {
          }
 
          const handleClick = (event) => {
+
             
             
             
@@ -85,9 +87,9 @@ export default function SearchBar({products, handleClick2}) {
             </div>
             
             {filteredData ? (
-            <ProductGrid allProducts={filteredData} handleClick2={handleClick2}/>
+            <ProductGrid allProducts={filteredData} handleClick2={handleClick2} onAdd={onAdd} onRemove={onRemove}/>
             ) : (
-            <ProductGrid allProducts={products} handleClick2={handleClick2}/>
+            <ProductGrid allProducts={products} handleClick2={handleClick2} onAdd={onAdd} onRemove={onRemove}/>
             )}
 
           </div>

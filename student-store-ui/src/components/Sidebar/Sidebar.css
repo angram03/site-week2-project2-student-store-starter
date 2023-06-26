@@ -2,7 +2,7 @@
 .SideBar.closed{
   background-color: rgb(166, 166, 218);
   height: 100%;
-  width: 150px;
+  width: 50px;
   position: fixed; 
   z-index: 1; 
   top: 0;
@@ -13,7 +13,7 @@
 .SideBar.open{
   background-color: rgb(166, 166, 218);
   height: 100%;
-  width: 350px;
+  width: 500px;
   position: fixed; 
   z-index: 1; 
   top: 0;

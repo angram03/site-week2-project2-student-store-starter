@@ -15,7 +15,7 @@ export default function ProductCard({currentProduct, currentProductid, handleCli
       
       <h2>Price: ${currentProduct.price}</h2>
       {/* <h2>{currentProduct.description}</h2> */}
-      <button onClick={() => handleClick2(currentProduct)} >Add to Cart</button>
+      <button value={currentProductid} onClick={() => handleClick2(currentProduct)} >Add to Cart</button>
 
       <div className="box">
        
