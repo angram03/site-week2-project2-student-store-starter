@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 
 
-export default function ProductCard({currentProduct, currentProductid, handleClick2}) {
+export default function ProductCard({currentProduct, currentProductid, onAdd, onRemove}) {
   
   return (
     
@@ -15,8 +15,10 @@ export default function ProductCard({currentProduct, currentProductid, handleCli
       
       <h2>Price: ${currentProduct.price}</h2>
       {/* <h2>{currentProduct.description}</h2> */}
-      <button value={currentProductid} onClick={() => handleClick2(currentProduct)} >Add to Cart</button>
-
+      {/* so here no need to change the onclick event listeners */}
+      <button value={currentProductid} onClick={onAdd} >+</button>
+      
+      <button value={currentProductid} onClick={onRemove} >-</button>
       <div className="box">
        
 
