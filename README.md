@@ -47,9 +47,9 @@ Student Store - 20 June 2023 - Watch Video
   </a>
 
 ### Week 3 Walkthrough
-<a href="https://www.loom.com/share/0ee43dc0a7a448858127d510f06c1ed2">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/0ee43dc0a7a448858127d510f06c1ed2-with-play.gif">
-</a>
+<a href="https://www.loom.com/share/18052b2df1244327b4aecf9a87764604">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/18052b2df1244327b4aecf9a87764604-with-play.gif">
+  </a>
 
 ### Week 3 Updates
 I am planning to resubmit! I still have to implement the rest of the core features, but they rely on the shopping cart which is still something I am trying to understand.
