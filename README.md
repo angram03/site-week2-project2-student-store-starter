@@ -52,8 +52,7 @@ Student Store - 20 June 2023 - Watch Video
   </a>
 
 ### Week 3 Updates
-I am planning to resubmit! I still have to implement the rest of the core features, but they rely on the shopping cart which is still something I am trying to understand.
-
+I tried my best. At Least the increment and decrement work and there is a shopping cart. The only problem is that the shopping cart only renders in the side bar once you close it and open it. Thank you for your time!!!
 
 ### Stretch Features
 
@@ -69,7 +68,7 @@ I am planning to resubmit! I still have to implement the rest of the core featur
 
 - [x] User can click to expand the shopping cart in the left navigation.
 - [x] Users can click the '+' button on a product cart to increment that product in the shopping cart.
-- [ ] Users can click the '-' button on a product cart to decrement that product in the shopping cart. If the count is zero, the product should be removed from the cart.
+- [x] Users can click the '-' button on a product cart to decrement that product in the shopping cart. If the count is zero, the product should be removed from the cart.
 - [ ] The shopping cart displays a table of products, quantities, subtotal, tax, and total.
 - [ ] Users can checkout, and receive a receipt confirming their purchase.
 
