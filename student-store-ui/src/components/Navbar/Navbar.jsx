@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
   crossorigin="anonymous"
 ></script>;
 
-export default function Navbar({size}) {
+export default function Navbar() {
   return (
     <div className="navbar">
       <div className="content">

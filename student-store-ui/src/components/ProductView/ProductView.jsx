@@ -8,8 +8,7 @@ export default function ProductView({ product, productid}) {
   const { name, image, price, description } = product;
 
   return (
-    // <ProductCard currentProduct={product} currentProductid = {productid}/>
-
+ 
     <div className="product-card">
       <h1>{name}</h1>
       <Link to={`/products/${productid}`}>
@@ -20,6 +19,6 @@ export default function ProductView({ product, productid}) {
       <h2>{description}</h2>
     </div>
 
-    //I want to implement the code here to look at the description product.description
+ 
   );
 }

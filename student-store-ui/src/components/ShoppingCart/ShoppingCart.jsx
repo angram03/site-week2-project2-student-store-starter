@@ -2,7 +2,7 @@ import * as React from "react";
 import "./ShoppingCart.css";
 import { useState, useEffect } from "react";
 
-export default function ShoppingCart({ cartItems, allProducts }) {
+export default function ShoppingCart() {
   // const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
   // const taxPrice = itemsPrice * 0.14;
   // const totalPrice = itemsPrice + taxPrice;
@@ -19,7 +19,7 @@ export default function ShoppingCart({ cartItems, allProducts }) {
         </thead>
 
         <tbody>
-          {cartItems?.map((item) => (
+          {/* {cartItems?.map((item) => (
             <div className="cart_box" key={item.id}>
               <div className="cart_img">
                 <td>{item.title}</td>
@@ -30,7 +30,7 @@ export default function ShoppingCart({ cartItems, allProducts }) {
                 </td>
               </div>
             </div>
-          ))}
+          ))} */}
         </tbody>
       </table>
     </div>

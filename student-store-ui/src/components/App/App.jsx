@@ -11,50 +11,43 @@ import ShoppingCart from "../ShoppingCart/ShoppingCart";
 export default function App() {
   const [allProducts, setAllProducts] = useState([]);
   const [isOpen, setIsOpen] = useState("closed");
-  const [cartItems, setCartItems] = useState([]);
  
-  console.log("cartItems in App", cartItems)
+  const [shoppingCart, setShoppingCart] = useState([])
+  
  
-  const onAdd = (event) => {
-    // console.log("`````````` in APP.jsx ---> onAdd() Event is: ", event.target.value)
-    const clickedProductId = event.target.value
-    // console.log("onAdd App", cartItems, event)
-    const exist = cartItems.find((x) => x.id === clickedProductId);
-    console.log("onAdd App",exist, cartItems, clickedProductId)
-    if (exist) 
-     {
-      return setCartItems(
-        //use map here rather than filter and also return the quantity
-        //this excutes when item is already in the cart so increment it q by 1
-        cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x)
-      );
 
+  const handleAddItemToCart = (event) => {
+    console.log("look here")
+    let productId = event.target.value 
+    const product = {itemId: productId, quantity: 1}
+    let cart = shoppingCart;
+
+    let found = cart.findIndex(item => item.itemId == productId);
+    if (found == -1) {
+      cart.push(product)
     }
-    // this executed when item is not in cart so set its q to 1 
     else {
-      const matchingProduct = allProducts.find((product) => product.id === +clickedProductId)
-      return setCartItems([...cartItems, { name: matchingProduct.name, id: matchingProduct.id, price: matchingProduct.price, qty: 1 }]);
+      cart.filter(item => item.itemId == prodId).forEach(item => item.quantity++)
     }
-   
-  };
 
+    setShoppingCart(cart)
+} 
 
-  const onRemove = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
-    if (exist.qty === 1) {
-      setCartItems(cartItems.map((x) => x.id !== product.id));
-    } else {
-      setCartItems(
-        cartItems.filter((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
-        )
-      );
-    }
-  };
+const handleRemoveItemFromCart = (event) => {
+  console.log("aqui")
+  let productId = event.target.value;
+  const product = {itemId: productId, quantity: 1}
+  let cart = shoppingCart;
 
+  let found = cart.findIndex(item => item.id == productId)
 
-
+  if (found != -1 ) {
+      cart.filter(item => item.itemId == productId).map(item => item.quantity--)
+      cart = cart.filter(item => item.quantity != 0)
+  }
+  
+  setShoppingCart(cart)
+}
 
   const handleToggle = () => {
     console.log("--here i handle toggle----")
@@ -83,16 +76,15 @@ export default function App() {
   return (
 
       <BrowserRouter>
-        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} handleToggle={handleToggle}  onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} setCartItems={setCartItems} allProducts={allProducts}/>
+        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} handleToggle={handleToggle} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart} />
         <Navbar/>
         
 		
   
         <Routes>
 
-           <Route path="/" element={<Home 
-                          allProducts={allProducts} onAdd={(event) => onAdd(event)} onRemove={onRemove}/>} />
-           <Route path="/products/:id" element={<ProductDetail onAdd={onAdd} onRemove={onRemove} allProducts={allProducts}/>} />  
+           <Route path="/" element={<Home allProducts={allProducts} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart}/>} />
+           <Route path="/products/:id" element={<ProductDetail />} />  
         </Routes>
       </BrowserRouter>
 

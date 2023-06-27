@@ -3,7 +3,7 @@ import "./SearchBar.css"
 import  { useState } from "react";
 import ProductGrid from "../ProductGrid/ProductGrid";
 
-export default function SearchBar({products, onAdd, onRemove}) {
+export default function SearchBar({products, handleAddItemToCart, handleRemoveItemFromCart}) {
  
    
          const [searchTerm, setSearchTerm] = useState("");
@@ -87,9 +87,9 @@ export default function SearchBar({products, onAdd, onRemove}) {
             </div>
             
             {filteredData ? (
-            <ProductGrid allProducts={filteredData} onAdd={onAdd} onRemove={onRemove}/>
+            <ProductGrid allProducts={filteredData} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart}/>
             ) : (
-            <ProductGrid allProducts={products} onAdd={onAdd} onRemove={onRemove}/>
+            <ProductGrid allProducts={products} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart} />
             )}
 
           </div>

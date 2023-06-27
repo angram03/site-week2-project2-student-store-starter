@@ -3,9 +3,9 @@ import "./Sidebar.css"
 import ShoppingCart from "../ShoppingCart/ShoppingCart"
 
 
-export default function Sidebar({handleToggle, isOpen, onAdd, onRemove, cartItems, setCartItems, allProducts}) {
+export default function Sidebar({handleToggle, isOpen, handleAddItemToCart, handleRemoveItemFromCart}) {
   if (isOpen === "open"){
-    <ShoppingCart   isOpen={isOpen} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} setCartItems={setCartItems} allProducts={allProducts}/>
+    <ShoppingCart   isOpen={isOpen} />
     
     
  }
@@ -27,7 +27,7 @@ export default function Sidebar({handleToggle, isOpen, onAdd, onRemove, cartItem
          
           </div>
 
-    {isOpen==="open" ? (<ShoppingCart isOpen={isOpen} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} setCartItems={setCartItems} allProducts={allProducts}/>) : null}
+    {isOpen==="open" ? (<ShoppingCart isOpen={isOpen}  handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart}/>) : null}
     
 
   
