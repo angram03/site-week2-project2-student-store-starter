@@ -7,12 +7,12 @@ import Navbar from "../Navbar/Navbar"
 import Hero from "../Hero/Hero"
 import SearchBar from "../SearchBar/SearchBar"
 
-export default function Home({ allProducts, handleAddItemtoCart, handleRemoveItemFromCart}) {
+export default function Home({ allProducts, handleAddItemToCart, handleRemoveItemFromCart, shoppingCart}) {
   return (
     <div className="home" id="home">
       {/* <Navbar /> */}
       <Hero />
-      <SearchBar products={allProducts} handleAddItemtoCart={handleAddItemtoCart} handleRemoveItemFromCart={handleRemoveItemFromCart}/>
+      <SearchBar products={allProducts} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart} shoppingCart={shoppingCart}/>
       <About />
       <Contact/>
       <Footer/>

@@ -6,8 +6,8 @@ export default function Contact() {
   return (
 
     <div className="contact" id="contact">
-        <h1>Contact Us</h1>
         <div className="info">
+        <h1>Contact Us</h1>
             <p>Email: code@path.org</p>
                 
             <p>Phone: 1-800-CODEPATH</p>

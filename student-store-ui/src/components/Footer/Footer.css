@@ -1,7 +1,9 @@
 .Footer {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(126, 215, 204);
+    background-color: lightblue;
     font-family: didot;
     font-weight: bold;
+    border: solid 10px #ffffff;
+    padding-left: 250px;
 }

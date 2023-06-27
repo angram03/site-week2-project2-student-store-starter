@@ -3,7 +3,7 @@ import "./SearchBar.css"
 import  { useState } from "react";
 import ProductGrid from "../ProductGrid/ProductGrid";
 
-export default function SearchBar({products, handleAddItemToCart, handleRemoveItemFromCart}) {
+export default function SearchBar({products, handleAddItemToCart, handleRemoveItemFromCart, shoppingCart}) {
  
    
          const [searchTerm, setSearchTerm] = useState("");
@@ -43,21 +43,21 @@ export default function SearchBar({products, handleAddItemToCart, handleRemoveIt
 
         return (
           <div>
-            <h1>Search</h1>
-            <div>
-                <form>
-                    <input
-                    id="searchTerm"
-                    type="text"
-                    value={searchTerm}
-                    onChange={handleSearch}
-                    placeholder="Search Item"
-                    />
-                    
-                </form>
-                
-
+            <div className="Search">
+              <h1 >Search</h1>
+                <div>
+                    <form>
+                        <input
+                        id="searchTerm"
+                        type="text"
+                        value={searchTerm}
+                        onChange={handleSearch}
+                        placeholder="Search Item"
+                        />
+                    </form>
+                </div>
             </div>
+            
 
             <div>
             <ul className="theList">
@@ -87,9 +87,9 @@ export default function SearchBar({products, handleAddItemToCart, handleRemoveIt
             </div>
             
             {filteredData ? (
-            <ProductGrid allProducts={filteredData} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart}/>
+            <ProductGrid allProducts={filteredData} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart} shoppingCart={shoppingCart}/>
             ) : (
-            <ProductGrid allProducts={products} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart} />
+            <ProductGrid allProducts={products} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart} shoppingCart={shoppingCart}/>
             )}
 
           </div>

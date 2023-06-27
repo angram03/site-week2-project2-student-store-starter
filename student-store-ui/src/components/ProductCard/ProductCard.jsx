@@ -16,7 +16,8 @@ export default function ProductCard({currentProduct, currentProductid, handleAdd
       <h2>Price: ${currentProduct.price}</h2>
 
       <button value={currentProductid} onClick={handleAddItemToCart}>+</button>
-      {/* <button value={currentProductid} onClick={handleAddItemToCart} >+</button> */}
+      
+     
 
      
       <button value={currentProductid} onClick={handleRemoveItemFromCart} >-</button>

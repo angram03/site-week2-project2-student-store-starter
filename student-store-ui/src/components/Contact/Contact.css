@@ -1,10 +1,14 @@
 .contact{
-    background-color: rgb(53, 125, 201);
+    background-color: rgb(255, 255, 255);
     height: 300px;
+    border: solid 10px #ffffff;
+    padding-left: 250px;
 }
 .contact h1{
    text-align: center;
 }
 .contact .info{
     text-align: center;
+    padding-left: 250px;
+    background-color: rgb(126, 215, 196)
 }

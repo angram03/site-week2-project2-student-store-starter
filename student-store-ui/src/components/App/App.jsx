@@ -14,29 +14,28 @@ export default function App() {
  
   const [shoppingCart, setShoppingCart] = useState([])
   
- 
 
   const handleAddItemToCart = (event) => {
-    console.log("look here")
+    
     let productId = event.target.value 
     const product = {itemId: productId, quantity: 1}
     let cart = shoppingCart;
-
     let found = cart.findIndex(item => item.itemId == productId);
     if (found == -1) {
       cart.push(product)
     }
     else {
-      cart.filter(item => item.itemId == prodId).forEach(item => item.quantity++)
+      cart.filter(item => item.itemId == productId).forEach(item => item.quantity++)
     }
-
     setShoppingCart(cart)
+    console.log("look here")
+    console.log(shoppingCart)
 } 
 
 const handleRemoveItemFromCart = (event) => {
   console.log("aqui")
-  let productId = event.target.value;
-  const product = {itemId: productId, quantity: 1}
+  const productId = event.target.value;
+  
   let cart = shoppingCart;
 
   let found = cart.findIndex(item => item.id == productId)
@@ -76,14 +75,14 @@ const handleRemoveItemFromCart = (event) => {
   return (
 
       <BrowserRouter>
-        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} handleToggle={handleToggle} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart} />
+        <Sidebar shoppingCart={shoppingCart}isOpen={isOpen} setIsOpen={setIsOpen} handleToggle={handleToggle} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart} allProducts={allProducts} />
         <Navbar/>
         
 		
   
         <Routes>
 
-           <Route path="/" element={<Home allProducts={allProducts} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart}/>} />
+           <Route path="/" element={<Home allProducts={allProducts} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart} shoppingCart={shoppingCart}/>}  />
            <Route path="/products/:id" element={<ProductDetail />} />  
         </Routes>
       </BrowserRouter>
